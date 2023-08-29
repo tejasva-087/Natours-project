@@ -1,0 +1,32 @@
+.img-composition {
+  position: relative;
+
+  &__img {
+    position: absolute;
+    width: 55%;
+    transition: all 0.3s;
+    border-radius: 0.4rem;
+
+    &--1 {
+      top: 1.4rem;
+      left: 2.4;
+    }
+    &--2 {
+      top: 6.4rem;
+      right: 0.6rem;
+    }
+    &--3 {
+      top: 14.4rem;
+      right: 14.4rem;
+    }
+    &:hover {
+      transform: scale(1.05);
+      z-index: 1;
+      outline: solid 1.4rem $color-primary;
+      outline-offset: 1.5rem;
+    }
+  }
+  &:hover &__img:not(:hover) {
+    transform: scale(0.95);
+  }
+}

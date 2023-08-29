@@ -1,0 +1,260 @@
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 3rem;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 2.6rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.8rem; }
+
+.u-content-spacing {
+  margin-bottom: 4.2rem; }
+
+.u-text-center {
+  text-align: center; }
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #fff; }
+  .heading-primary--main {
+    letter-spacing: 2.4rem;
+    font-size: 6.4rem;
+    display: block;
+    margin-bottom: 2rem;
+    animation: moveInRight 0.6s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.4rem;
+    animation: moveInLeft 0.6s ease-out; }
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.3s; }
+  .heading-secondary:hover {
+    transform: skew(3deg, 3deg) scale(1.1);
+    text-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #777; }
+
+.text {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777; }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 2rem 4rem;
+  border-radius: 10rem;
+  position: relative;
+  transition: all 0.4s; }
+  .btn--white {
+    color: #777;
+    background-color: #fff; }
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    background: #fff;
+    z-index: -1;
+    transition: all 0.4s; }
+  .btn:hover {
+    box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.6rem); }
+    .btn:hover:after {
+      transform: scale(1.4, 1.6);
+      opacity: 0; }
+
+.btn-text {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #55c57a;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 0.2rem solid #55c57a;
+  font-weight: 500;
+  transition: all 0.3s; }
+  .btn-text:hover {
+    background-color: #55c57a;
+    color: #fff;
+    transform: translateY(-0.4rem);
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.15); }
+  .btn-text:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.15); }
+
+.img-composition {
+  position: relative; }
+  .img-composition__img {
+    position: absolute;
+    width: 55%;
+    transition: all 0.3s;
+    border-radius: 0.4rem; }
+    .img-composition__img--1 {
+      top: 1.4rem;
+      left: 2.4; }
+    .img-composition__img--2 {
+      top: 6.4rem;
+      right: 0.6rem; }
+    .img-composition__img--3 {
+      top: 14.4rem;
+      right: 14.4rem; }
+    .img-composition__img:hover {
+      transform: scale(1.05);
+      z-index: 1;
+      outline: solid 1.4rem #55c57a;
+      outline-offset: 1.5rem; }
+  .img-composition:hover .img-composition__img:not(:hover) {
+    transform: scale(0.95); }
+
+.card {
+  text-align: center;
+  padding: 3rem 2.4rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s;
+  box-shadow: 0 1.4rem 2.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.4rem; }
+  .card__icon {
+    display: inline-block;
+    font-size: 6.4rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 3.8rem; }
+  .card:hover {
+    transform: translateY(-1.8rem);
+    box-shadow: 0 0.7rem 2.1rem rgba(0, 0, 0, 0.15); }
+
+.tour {
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .tour__side {
+    height: 50rem;
+    transition: all 0.8s;
+    height: 50rem;
+    background-color: red; }
+    .tour__side:hover {
+      transform: rotateY(180deg); }
+
+.row {
+  max-width: 115rem;
+  margin-right: auto;
+  margin-left: auto; }
+  .row::after {
+    content: "";
+    clear: both;
+    display: block; }
+  .row:not(:last-child) {
+    margin-bottom: 5.2rem; }
+  .row [class^="col--"] {
+    float: left; }
+    .row [class^="col--"]:not(:last-child) {
+      margin-right: 5.2rem; }
+  .row .col--1-of-2 {
+    width: calc((100% - 5.2rem) / 2); }
+  .row .col--1-of-3 {
+    width: calc((100% - 10.4rem) / 3); }
+  .row .col--1-of-4 {
+    width: calc((100% - 15.6rem) / 4); }
+  .row .col--2-of-3 {
+    width: calc( ((100% - 10.4rem) / 3) * 2 + 5.2rem); }
+  .row .col--2-of-4 {
+    width: calc( ((100% - 15.6rem) / 4) * 2 + 5.2rem); }
+  .row .col--3-of-4 {
+    width: calc( ((100% - 15.6rem) / 4) * 3 + 10.4rem); }
+
+.header {
+  text-align: center;
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(/img/hero.jpg);
+  position: relative;
+  background-position: top;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  .header__img-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%); }
+
+.section-about {
+  padding: 25rem 0 30rem;
+  background-color: #f7f7f7;
+  margin-top: -20rem; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(/img/nat-6.jpg);
+  position: relative;
+  background-position: top;
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
+
+.section-tour {
+  padding: 20rem 0; }
