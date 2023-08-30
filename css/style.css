@@ -12,7 +12,8 @@ body {
   margin: 3rem;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #777; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
@@ -102,6 +103,13 @@ body {
   .btn--white {
     color: #777;
     background-color: #fff; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff; }
+    .btn--green::after {
+      background-color: #55c57a; }
   .btn::after {
     content: "";
     position: absolute;
@@ -110,7 +118,6 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 10rem;
-    background: #fff;
     z-index: -1;
     transition: all 0.4s; }
   .btn:hover {
@@ -185,7 +192,7 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 48rem; }
+  height: 50rem; }
   .tours__card {
     height: 50rem;
     transition: all 0.8s;
@@ -193,76 +200,75 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-    border-radius: 0.4rem;
-    overflow: hidden; }
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15); }
     .tours__card--back {
       transform: rotateY(180deg);
+      z-index: -1;
       text-align: center;
-      padding: 12.2rem 4.2rem; }
+      padding: 12rem 0; }
       .tours__card--back--1 {
         background-image: linear-gradient(to bottom right, #ffb900, #ff7730); }
       .tours__card--back--2 {
         background-image: linear-gradient(to bottom right, #7ed56f, #28b485); }
       .tours__card--back--3 {
         background-image: linear-gradient(to bottom right, #2998ff, #5643fa); }
-    .tours__card-img-box {
-      height: 22rem;
-      background-size: cover;
-      background-position: top;
-      background-blend-mode: screen;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
-      .tours__card-img-box--1 {
-        background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url(/img/nat-5.jpg); }
-      .tours__card-img-box--2 {
-        background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(/img/nat-6.jpg); }
-      .tours__card-img-box--3 {
-        background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url(/img/nat-7.jpg); }
-    .tours__card-heading {
-      position: absolute;
-      top: 13rem;
-      right: 1.4rem;
-      font-size: 3rem;
-      font-weight: 300;
-      color: #fff;
-      text-align: right;
-      width: 60%;
-      text-transform: uppercase; }
-    .tours__card-heading--span {
-      padding: 0.6rem 1.5rem;
-      box-decoration-break: clone; }
-      .tours__card-heading--span--1 {
-        background-image: linear-gradient(to right, rgba(255, 185, 0, 0.7), rgba(255, 119, 48, 0.7)); }
-      .tours__card-heading--span--2 {
-        background-image: linear-gradient(to right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)); }
-      .tours__card-heading--span--3 {
-        background-image: linear-gradient(to right, rgba(41, 152, 255, 0.7), rgba(86, 67, 250, 0.7)); }
-    .tours__card-text-box ul {
-      list-style: none;
-      text-align: center;
-      font-size: 1.6rem;
-      color: #777;
-      width: 70%;
-      margin: 0 auto; }
-      .tours__card-text-box ul li {
-        padding: 1.4rem 2.4rem; }
-        .tours__card-text-box ul li:not(:last-child) {
-          border-bottom: 1px solid #ddd; }
-    .tours__card-only {
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      color: #fff; }
-    .tours__card-price {
-      font-size: 5.2rem;
-      font-weight: 100;
-      color: #fff; }
   .tours:hover .tours__card--front {
     transform: rotateY(-180deg); }
   .tours:hover .tours__card--back {
     transform: rotateY(0); }
+  .tours__img-box {
+    height: 24rem;
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .tours__img-box--1 {
+      background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url(/img/nat-5.jpg); }
+    .tours__img-box--2 {
+      background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(/img/nat-6.jpg); }
+    .tours__img-box--3 {
+      background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url(/img/nat-7.jpg); }
+  .tours__text-box {
+    text-align: center; }
+  .tours__heading {
+    font-size: 3.2rem;
+    font-weight: 300;
+    position: absolute;
+    top: 14rem;
+    right: 2rem;
+    text-align: right;
+    width: 70%;
+    box-decoration-break: clone;
+    text-transform: uppercase;
+    color: #fff; }
+    .tours__heading--span {
+      padding: 0.6rem 1.5rem; }
+      .tours__heading--span--1 {
+        background-image: linear-gradient(to right, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+      .tours__heading--span--2 {
+        background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+      .tours__heading--span--3 {
+        background-image: linear-gradient(to right, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .tours__list {
+    width: 75%;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 1.6rem; }
+    .tours__list--items {
+      padding: 1.4rem 2.4rem; }
+      .tours__list--items:not(:last-child) {
+        border-bottom: 0.1rem solid #ddd; }
+  .tours__only {
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .tours__price {
+    color: #fff;
+    font-size: 6.4rem;
+    font-weight: 100; }
 
 .row {
   max-width: 115rem;
@@ -329,6 +335,6 @@ body {
     transform: skewY(7deg); }
 
 .section-tours {
-  padding: 20rem 0 30rem;
+  padding: 20rem 0;
   background-color: #f7f7f7;
   margin-top: -9rem; }
