@@ -55,9 +55,9 @@
   text-decoration: none;
   color: $color-primary;
   padding: 0.6rem 0.8rem;
+  border: none;
   border-bottom: 0.2rem solid $color-primary;
   font-weight: 500;
-
   transition: all 0.3s;
 
   &:hover {

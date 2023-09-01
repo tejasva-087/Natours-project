@@ -1,0 +1,50 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  background-color: rgba($color-white, 0.8);
+  padding: 6.4rem 8.2rem;
+  transform: skewX(-12deg);
+
+  &__figure {
+    width: 16rem;
+    height: 16rem;
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translateX(-3rem) skewX(12deg);
+
+    &--img {
+      height: 100%;
+      transform: translateX(-4rem) scale(1.2);
+      transition: all 0.5s;
+    }
+
+    &--caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      color: $color-white;
+      font-size: 1.8rem;
+      text-align: center;
+      line-height: 1.6;
+      text-transform: uppercase;
+      transition: all 0.5s;
+      opacity: 0;
+    }
+  }
+
+  &:hover &__figure--caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &:hover &__figure--img {
+    filter: blur(0.2rem);
+    transform: scaleY(1) translateX(-4rem);
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+}

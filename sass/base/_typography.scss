@@ -41,6 +41,7 @@
 }
 
 .heading-tertiary {
+  display: inline-block;
   font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -49,7 +50,6 @@
 
 .text {
   font-size: 1.6rem;
-
   line-height: 1.7;
   color: $color-grey-dark;
 }
