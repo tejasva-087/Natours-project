@@ -18,6 +18,43 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <!-- Navigation -->
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#about" class="navigation__link"
+              ><span>01</span>About Natuors</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#benifits" class="navigation__link"
+              ><span>02</span>Your beinfits</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#tours" class="navigation__link"
+              ><span>03</span>Popular tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#stories" class="navigation__link"
+              ><span>04</span>Stories</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#booking" class="navigation__link"
+              ><span>05</span>Book now</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
     <!-- Header -->
     <header class="header">
       <div class="header__img-box">
@@ -33,7 +70,7 @@
     </header>
     <main>
       <!-- Section about -->
-      <section class="section-about">
+      <section class="section-about" id="about">
         <div class="u-text-center u-margin-bottom-big">
           <h2 class="heading-secondary">
             Excitin tours for adventurous people
@@ -83,7 +120,7 @@
         </div>
       </section>
       <!-- section features -->
-      <section class="section-features">
+      <section class="section-features" id="benifits">
         <div class="row">
           <div class="col--1-of-4">
             <div class="card">
@@ -139,7 +176,7 @@
         </div>
       </section>
       <!-- Section tours -->
-      <section class="section-tours">
+      <section class="section-tours" id="tours">
         <div class="u-text-center u-margin-bottom-big">
           <h2 class="heading-secondary">Most popular tours</h2>
         </div>
@@ -228,7 +265,7 @@
         </div>
       </section>
       <!-- Section stories -->
-      <section class="section-stories">
+      <section class="section-stories" id="stories">
         <div class="video-bg">
           <video class="video-bg__content" autoplay muted loop>
             <source src="/img/video.mp4" type="video/mp4" />
@@ -298,7 +335,7 @@
         </div>
       </section>
       <!-- Section booking -->
-      <section class="section-booking">
+      <section class="section-booking" id="booking">
         <div class="row">
           <div class="book">
             <form action="#" class="form">
@@ -355,5 +392,45 @@
         </div>
       </section>
     </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img src="/img/logo-green-1x.png" alt="logo" class="footer__logo" />
+      </div>
+      <div class="row">
+        <div class="col--1-of-2">
+          <div class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Company</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Carrers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy policy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col--1-of-2">
+          <div class="footer__copyright">
+            Built by <a href="#" class="footer__link">Jonas Schmedmann</a> for
+            hus online course
+            <a href="#" class="footer__link">Advances CSS and Sass</a>.
+            Copyright &copy; by Jonas Schmedmann. You are 100% allowed to use
+            this webpage for both personal and commercial use, but NOT to claim
+            it as your own design. A credit to the original author, Jonas
+            Schmedtmann, is of course highly appreciated!
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
