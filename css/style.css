@@ -33,6 +33,18 @@ body {
 .u-text-center {
   text-align: center !important; }
 
+.u-column--2 {
+  -moz-column-count: 2;
+  -moz-column-gap: 2.4rem;
+  -moz-column-rule: 0.1rem solid #eee;
+  column-count: 2;
+  column-gap: 2.4rem;
+  column-rule: 0.1rem solid #eee;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
 .heading-primary {
   text-transform: uppercase;
   color: #fff; }
@@ -213,7 +225,9 @@ body {
     width: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.3rem;
+    overflow: hidden; }
     .tours__card--back {
       transform: rotateY(180deg);
       z-index: -1;
@@ -281,6 +295,64 @@ body {
     font-size: 6.4rem;
     font-weight: 100; }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.3s; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    display: table;
+    overflow: hidden;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    transition: all 0.3s 0.2s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__left {
+    width: 33.3%;
+    display: table-cell;
+    vertical-align: middle; }
+  .popup__right {
+    width: 66.6%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3.2rem 5.2rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__close:link, .popup__close:visited {
+    color: #777;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    line-height: 1; }
+  .popup__close:hover, .popup__close:active {
+    color: #55c57a; }
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -302,7 +374,7 @@ body {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, 50%);
+      transform: translate(-50%, -50%);
       color: #fff;
       font-size: 1.8rem;
       text-align: center;
@@ -385,13 +457,13 @@ body {
     border-radius: 50%;
     border: solid 0.4rem #55c57a; }
     .form__radio-button::after {
-      content: "";
-      height: 1rem;
-      width: 1rem;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      content: "";
+      height: 1rem;
+      width: 1rem;
       border-radius: 50%; }
   .form__radio-input:checked + .form__radio-label .form__radio-button::after {
     background-color: #55c57a; }
@@ -440,8 +512,10 @@ body {
     height: 3.5rem; }
   .header__text-box {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    top: 40%;
     transform: translate(-50%, -40%); }
 
 .footer {
@@ -471,7 +545,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
-    padding: 0.2rem 0; }
+    padding: 0.2rem 0.4rem; }
   .footer__link:hover {
     color: #55c57a;
     background-color: #333;

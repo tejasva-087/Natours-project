@@ -71,13 +71,10 @@
     border: solid 0.4rem $color-primary;
 
     &::after {
+      @include absCenter;
       content: "";
       height: 1rem;
       width: 1rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       border-radius: 50%;
     }
   }
