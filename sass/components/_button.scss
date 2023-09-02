@@ -3,10 +3,11 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.6rem;
-  padding: 2rem 4rem;
+  padding: 1.8rem 4rem;
   border-radius: 10rem;
   position: relative;
   transition: all 0.4s;
+  border: none;
 
   &--white {
     color: $color-grey-dark;
@@ -47,6 +48,12 @@
       opacity: 0;
     }
   }
+
+  &:active {
+    outline: none;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.8rem 1.6rem rgba($color-black, 0.15);
+  }
 }
 
 .btn-text {
@@ -61,6 +68,7 @@
   transition: all 0.3s;
 
   &:hover {
+    outline: none;
     background-color: $color-primary;
     color: $color-white;
     transform: translateY(-0.4rem);
