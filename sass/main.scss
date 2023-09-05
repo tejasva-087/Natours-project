@@ -1,13 +1,19 @@
 // Abstracts
-@import "abstract/variables";
 @import "abstract/mixins";
+@import "abstract/variables";
 @import "abstract/functions";
 
 // Base
 @import "base/base";
-@import "base/utility";
 @import "base/typography";
+@import "base/utility";
 @import "base/animation";
+
+// layout
+@import "layouts/grid";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/navigation";
 
 // components
 @import "components/button";
@@ -18,12 +24,6 @@
 @import "components/story";
 @import "components/video-bg";
 @import "components/form";
-
-// layout
-@import "layouts/grid";
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/navigation";
 
 // Pages
 @import "pages/_home.scss";

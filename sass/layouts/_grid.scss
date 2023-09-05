@@ -1,11 +1,18 @@
 .row {
   max-width: $grid-width;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   @include clearfix;
+
+  @include respond(1000) {
+    max-width: $grid-width-small;
+  }
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(1000) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   [class^="col--"] {
@@ -19,14 +26,60 @@
   .col {
     &--1-of-2 {
       width: calc((100% - #{$gutter-horizontal}) / 2);
+
+      @include respond(900) {
+        width: 100%;
+      }
     }
 
     &--1-of-3 {
       width: calc((100% - #{$gutter-horizontal * 2}) / 3);
+
+      @include respond(700) {
+        width: 50%;
+        margin-left: 25%;
+
+        &:not(:last-child) {
+          margin-bottom: 5.4rem;
+        }
+      }
+
+      @include respond(500) {
+        width: 70%;
+        margin-left: 15%;
+
+        &:not(:last-child) {
+          margin-bottom: 5.4rem;
+        }
+      }
     }
 
     &--1-of-4 {
       width: calc((100% - #{$gutter-horizontal * 3}) / 4);
+
+      @include respond(1000) {
+        text-align: center;
+        width: 40%;
+        margin: 0 !important;
+        margin-right: 6.4rem !important;
+        margin-bottom: 6.4rem !important;
+      }
+
+      @include respond(700) {
+        text-align: center;
+        width: 80%;
+        margin: 0 !important;
+        margin-bottom: 2.4rem !important;
+        margin-left: 1.2rem !important;
+      }
+
+      @include respond(500) {
+        text-align: center;
+        width: 80%;
+        margin: 0 !important;
+        margin-bottom: 2.4rem !important;
+        margin-left: -8% !important;
+      }
     }
 
     &--2-of-3 {

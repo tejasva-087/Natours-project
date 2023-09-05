@@ -82,4 +82,17 @@
   &__radio-input:checked + &__radio-label &__radio-button::after {
     background-color: $color-primary;
   }
+
+  @include respond(900) {
+    width: 60%;
+
+    &__radio-group {
+      display: block;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  @include respond(700) {
+    width: 100%;
+  }
 }

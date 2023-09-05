@@ -107,6 +107,14 @@
       );
       background-size: 220%;
       transition: all 0.4s;
+
+      @include respond(700) {
+        font-size: 2.4rem;
+      }
+
+      @include respond(500) {
+        font-size: 1.8rem;
+      }
     }
 
     &:hover,
@@ -144,5 +152,50 @@
   &__checkbox:checked + &__button &__icon:after {
     transform: rotate(-45deg);
     top: 0;
+  }
+}
+
+@include respond(500) {
+  .navigation {
+    &__button {
+      height: 5.2rem;
+      width: 5.2rem;
+      top: 3.4rem;
+      right: 4.2rem;
+    }
+
+    &__background {
+      height: 3rem;
+      width: 3rem;
+      top: 3.8rem;
+      right: 4.4rem;
+    }
+
+    &__icon {
+      position: relative;
+      margin-top: 2.6rem;
+
+      &,
+      &::before,
+      &::after {
+        width: 2.4rem;
+        height: 2px;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: 0.3rem;
+      }
+
+      &::after {
+        top: -0.3rem;
+      }
+    }
   }
 }

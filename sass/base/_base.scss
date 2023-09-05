@@ -7,7 +7,19 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 68.75%;
+
+  @include respond(1400) {
+    font-size: 56.25%;
+  }
+
+  @include respond(1800) {
+    font-size: 81.25%;
+  }
+
+  @include respond(1100) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -16,4 +28,8 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: $color-grey-dark;
+
+  @include respond(700) {
+    margin: 0;
+  }
 }

@@ -45,3 +45,24 @@
     transform: skewX(12deg);
   }
 }
+
+@include respond(900) {
+  .story {
+    padding: 3.2rem;
+    transform: skewX(0);
+
+    &__figure {
+      float: none;
+      transform: skewX(0);
+      margin-bottom: 2.4rem;
+
+      &--img {
+        transform: translateX(-4rem) scale(1);
+      }
+    }
+
+    &__text {
+      transform: skewX(0);
+    }
+  }
+}

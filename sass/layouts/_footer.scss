@@ -22,6 +22,10 @@
 
   &__list {
     list-style: none;
+
+    @include respond(1000) {
+      text-align: center;
+    }
   }
 
   &__item {
@@ -40,6 +44,13 @@
       text-transform: uppercase;
       display: inline-block;
       padding: 0.2rem 0.4rem;
+      color: $color-primary;
+
+      @include respond(1000) {
+        color: $color-primary;
+        text-decoration: underline;
+        margin-bottom: 0.4rem;
+      }
     }
 
     &:hover {
