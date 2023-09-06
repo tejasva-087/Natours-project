@@ -164,7 +164,7 @@
   }
 }
 
-@include respond(1400) {
+@media only screen and (max-width: 1200), only screen and (hover: none) {
   .tours {
     height: auto;
     background-color: $color-white;

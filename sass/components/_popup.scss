@@ -6,11 +6,11 @@
   left: 0;
   z-index: 3000;
   background-color: rgba($color-black, 0.15);
+  transition: all 0.3s;
+  backdrop-filter: blur(1.2rem);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: all 0.3s;
-  backdrop-filter: blur(1.2rem);
 
   &__content {
     @include absCenter;
