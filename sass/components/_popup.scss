@@ -5,11 +5,12 @@
   top: 0;
   left: 0;
   z-index: 3000;
-  background-color: rgba($color-black, 0.9);
+  background-color: rgba($color-black, 0.15);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
   transition: all 0.3s;
+  backdrop-filter: blur(1.2rem);
 
   &__content {
     @include absCenter;
@@ -70,6 +71,42 @@
     &:hover,
     &:active {
       color: $color-primary;
+    }
+  }
+
+  @include respond(1100) {
+    height: 100vh;
+    overflow: visible;
+
+    &__img {
+      display: none;
+    }
+
+    &__left {
+      display: none;
+    }
+
+    &__right {
+      padding: 2.4rem;
+      width: auto;
+      display: block;
+
+      .heading-secondary {
+        font-size: 1.8rem;
+      }
+
+      .heading-tertiary {
+        font-size: 1.4rem;
+      }
+
+      .text {
+        font-size: 1.4rem;
+      }
+
+      .btn {
+        font-size: 1.4rem;
+        padding: 1.2rem 1.8rem;
+      }
     }
   }
 }
