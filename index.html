@@ -107,17 +107,20 @@
           <div class="col--1-of-2">
             <div class="img-composition">
               <img
-                src="/img/nat-1-large.jpg"
+                srcset="/img/nat-1-large.jpg 1000w, /img/nat-1.jpg 300w"
+                sizes="(max-width: 56.25em) 22vw, (max-width: 31.25em) 30vw, 300px"
                 alt="Beautiful scenery"
                 class="img-composition__img img-composition__img--1"
               />
               <img
-                src="/img/nat-2-large.jpg"
+                srcset="/img/nat-2-large.jpg 1000w, /img/nat-2.jpg 300w"
+                sizes="(max-width: 56.25em) 25vw, (max-width: 31.25em) 35vw, 300px"
                 alt="Beautiful scenery"
                 class="img-composition__img img-composition__img--2"
               />
               <img
-                src="/img/nat-3-large.jpg"
+                srcset="/img/nat-3-large.jpg 1000w, /img/nat-3.jpg 300w"
+                sizes="(max-width: 56.25em) 22vw, (max-width: 31.25em) 30vw, 300px"
                 alt="Beautiful scenery"
                 class="img-composition__img img-composition__img--3"
               />
@@ -434,7 +437,20 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="/img/logo-green-1x.png" alt="logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            alt="Full Logo"
+            src="img/logo-green-2x.png"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col--1-of-2">

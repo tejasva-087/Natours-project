@@ -223,12 +223,15 @@ body {
 .header {
   text-align: center;
   height: 95vh;
-  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(/img/hero.jpg);
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(/img/hero-small.jpg);
   position: relative;
   background-position: top;
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 112.5em) {
+    .header {
+      background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(/img/hero.jpg); } }
   .header__img-box {
     position: absolute;
     top: 4rem;
@@ -527,28 +530,28 @@ body {
       outline-offset: 1.5rem; }
     .img-composition__img:hover .img-composition__img__img:not(:hover) {
       transform: scale(0.95); }
-    @media only screen and (max-width: 56.25em) {
-      .img-composition__img {
-        width: 25%;
-        display: inline-block;
-        box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
-        pointer-events: none; }
-        .img-composition__img--1 {
-          top: 2.8rem;
-          left: 15%;
-          transform: translateX(-15%); }
-        .img-composition__img--2 {
-          top: 2.2rem;
-          left: 50%;
-          transform: translateX(-50%) scale(1.15);
-          z-index: 1; }
-        .img-composition__img--3 {
-          top: 2.8rem;
-          left: 85%;
-          transform: translateX(-85%); } }
     @media only screen and (max-width: 31.25em) {
       .img-composition__img {
-        width: 35%; } }
+        width: 35% !important; } }
+  @media only screen and (max-width: 56.25em) {
+    .img-composition__img {
+      width: 25%;
+      display: inline-block;
+      box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+      pointer-events: none; }
+      .img-composition__img--1 {
+        top: 2.8rem;
+        left: 15%;
+        transform: translateX(-15%); }
+      .img-composition__img--2 {
+        top: 2.2rem;
+        left: 50%;
+        transform: translateX(-50%) scale(1.15);
+        z-index: 1; }
+      .img-composition__img--3 {
+        top: 2.8rem;
+        left: 85%;
+        transform: translateX(-85%); } }
 
 .card {
   text-align: center;

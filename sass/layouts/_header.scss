@@ -6,12 +6,22 @@
       rgba($color-primary-light, 0.7),
       rgba($color-primary-dark, 0.7)
     ),
-    url(/img/hero.jpg);
+    url(/img/hero-small.jpg);
   position: relative;
   background-position: top;
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 112.5em) {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)
+      ),
+      url(/img/hero.jpg);
+  }
 
   &__img-box {
     position: absolute;
